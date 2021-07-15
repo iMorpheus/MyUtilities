@@ -10,6 +10,7 @@
 # - URL Second Level Domain
 # - URL Top Level Domain
 # - Path to whatever
+# - That day's date
 #######################################
 
 
@@ -31,6 +32,10 @@
 #	* Captures Top Level Domain
 # - GetPath
 #	* Captures path to resource?
+# - WriteOut
+#	* Writes data to file
+# - Review
+#	* Shows updated file
 #####################################
 
 
