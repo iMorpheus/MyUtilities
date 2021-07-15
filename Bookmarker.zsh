@@ -111,12 +111,12 @@ PrintHeader
 
 Function WriteOut(){
 echo $Entry | pbcopy
-pbpaste >> ~/Dropbox/Bookmarker/2021_Bookmarks.csv
+pbpaste >> [Path to Bookmark.csv]
 PrintHeader
 }
 
 Function Review(){
-csvlook ~/Dropbox/Bookmarker/2021_Bookmarks.csv
+csvlook [Path to Bookmark.csv]
 sleep 10
 }
 
