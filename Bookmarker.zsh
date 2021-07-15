@@ -104,6 +104,17 @@ read -r "Path?Path:/ "
 PrintHeader
 }
 
+Function WriteOut(){
+echo $Entry | pbcopy
+pbpaste >> ~/Dropbox/Bookmarker/2021_Bookmarks.csv
+PrintHeader
+}
+
+Function Review(){
+csvlook ~/Dropbox/Bookmarker/2021_Bookmarks.csv
+sleep 10
+}
+
 #### MAIN FUNCTION ###
 Function GetBookMark(){
 PrintHeader
@@ -125,6 +136,8 @@ GetPath
 # - GetSecondLevelDomain
 # - GetTLD
 # - GetPath
+# - WriteOut
+# - Review
 ##########################
 
 
@@ -137,10 +150,7 @@ Entry=$(print "$Title - $SiteName,$Scheme$Subdomain$SLD$TLD/$Path,$DateSaved")
 
 
 ### OUTPUT ###
-echo $Entry | pbcopy
-pbpaste >> [Path to Bookmark.csv]
+WriteOut
 
 #### VIEW ####
-csvlook [Path to Bookmark.csv]
-sleep 10
-clear
+Review
