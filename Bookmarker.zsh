@@ -92,7 +92,7 @@ Function GetTLD () {
 PS3="Select TLD: "
 select TLD in .com .org .edu .gov .net .xyz .cc .co.jp other none
 do
-case $Domain in
+case $TLD in
 other) 
 	read -r "TLD?Enter TLD: " 
 	TLD=".$TLD";;
